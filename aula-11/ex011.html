@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De qual pais você é?</title>
+</head>
+
+<body>
+    <h1>De qual país você é ?</h1>
+    Digite o nome do seu país <input type="text" name="seuPais" id="seuPais">
+    <input type="button" value="verificar" onclick="pesquisar()">
+    <div id="resposta"></div>
+
+
+    <script>
+        function pesquisar() {
+            let nomeDoPais = document.querySelector('#seuPais');
+            let resultado = document.querySelector('#resposta');
+            let pais = "Brasil";
+            if (pais == nomeDoPais.value) {
+                resultado.innerHTML = `<p> Você é <strong>Brasileiro!</strong></p>`;
+            } else {
+                resultado.innerHTML = `<p> Você é <strong>Estrangeiro!</strong></p>`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
